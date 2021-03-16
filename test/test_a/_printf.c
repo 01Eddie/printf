@@ -16,6 +16,7 @@ int _printf(const char* format,...)
     printT print[] = {
         {"c", p_char},
         {"s", p_str},
+
         {NULL, NULL}
     };//Module 1: Initializing Myprintf's arguments 
     va_list arg; 
