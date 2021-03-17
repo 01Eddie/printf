@@ -121,3 +121,15 @@ int p_int(va_list arg)
 
 	return (num);
 }
+
+/**
+ * p_binary - function for binary
+ * @arg: va_list of stdarg of arguments
+ * Return: c.
+ */
+int p_binary(va_list arg)
+{
+	int num = va_arg(arg, int);
+
+	return (to_binary(num));
+}

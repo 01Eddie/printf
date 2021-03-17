@@ -15,6 +15,7 @@ int _printf(const char *format, ...)
 		{"s", p_str},
 		{"d", p_doub},
 		{"i", p_int},
+		{"b", p_binary},
 		{NULL, NULL}
 	};/*Module 1: Initializing Myprintf's arguments*/
 

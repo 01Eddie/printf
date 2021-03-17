@@ -25,5 +25,7 @@ int p_char(va_list arg);
 int p_str(va_list arg);
 int p_int(va_list arg);
 int p_doub(va_list arg);
+int p_binary(va_list arg);
 
+int to_binary(int num);
 #endif /* _HOLBERTON_*/
