@@ -5,13 +5,19 @@
 
 #include <stdio.h>
 #include <limits.h>
+
+/**
+ * struct print - struct print information
+ * @print: Character
+ * @p: Integer
+ */
 typedef struct print
 {
-    char *print;
-    int (*p)();
+	char *print;
+	int (*p)();
 } printT;
 
-int _printf(const char* format, ...);
+int _printf(const char *format, ...);
 
 int _putchar(char c);
 
@@ -19,6 +25,5 @@ int p_char(va_list arg);
 int p_str(va_list arg);
 int p_int(va_list arg);
 int p_doub(va_list arg);
-
 
 #endif /* _HOLBERTON_*/
