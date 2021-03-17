@@ -8,16 +8,9 @@
 
 int _printf(const char *format, ...)
 {
-	unsigned int i, j;
-	unsigned int len = 0;/* outFlag = 0,*//*char *s;*//*char *traverse;*/
-	printT print[] = {
-		{"c", p_char},
-		{"s", p_str},
-		{"d", p_doub},
-		{"i", p_int},
-		{"b", p_binary},
-		{NULL, NULL}
-	};/*Module 1: Initializing Myprintf's arguments*/
+	unsigned int i = 0, j, len = 0;
+	printT print[] = {{"c", p_char}, {"s", p_str}, {"d", p_doub}, {"i", p_int},
+	{"b", p_binary}, {NULL, NULL}};/*Module 1: Initializing Myprintf's arguments*/
 
 	va_list arg;
 
@@ -26,16 +19,15 @@ int _printf(const char *format, ...)
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (0);
 
-	i = 0;
-	while (format[i] != '\0')
+	while (format != NULL && format[i] != '\0')
 	{
 		if (format[i] == '%' && format[i + 1] != '%')
-		{/*outFlag = 0;*/
+		{
 			for (j = 0; print[j].p != NULL; j++)
 			{/*Module 2: Fetching and executing arguments*/
 				if (format[i + 1] == print[j].print[0])
 				{
-					len = len + print[j].p(arg);/*outFlag = 1;*/
+					len = len + print[j].p(arg);
 					i++;
 				}
 			}
