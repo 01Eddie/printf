@@ -12,7 +12,7 @@ int p_char(va_list arg)
 	c = va_arg(arg, int);
 	_putchar(c);
 
-	return (c);
+	return (1);
 }
 
 /**
@@ -29,7 +29,7 @@ int p_str(va_list arg)
 	s = va_arg(arg, char *);
 
 	if (s == NULL)
-		s = "(NULL)";
+		s = "(null)";
 
 	for (i = 0; s[i] != '\0'; i++)
 		_putchar(s[i]);
