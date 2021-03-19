@@ -1,20 +1,40 @@
-_PRINTF(1)BSDGeneral Commands Manual_PRINTF(1)
+.Dd 201/3/12               \" DATE
+.Dt _Printf                 \" Program name and manual section number
+.Os Unix
+.Sh _Printf                 \" Section Header - required - don't modify
+.Nm _printf,
+.\" The following lines are read in generating the apropos(man -k) database. Use only key
+.\" words here as the database is built based on the words here and in the .ND line.
 
-Printf
-_printf,
--- This line parsed for whatis database.
-SYNOPSIS
-_printf, ( string $format , mixed ...$values )arg0 arg2 ...
-DESCRIPTION
-Print ARGUMENT(s) according to FORMAT, or execute according to OPTION:
+.\" Use .Nm macro to designate other names for the documented program.
+.Nd Print formatted output conversion.
+.Sh SYNOPSIS             \" Section Header - required - don't modify
+.Nm
+( string $format , mixed ...$values )arg0 arg2 ...
+.Op Ar                   \" [file ...]
+.Ar arg0                 \" Underlined argument - use .Ar anywhere to underline
+arg2 ...                 \" Arguments
+.Sh CONVERSION CUSTOM SPECIFIER
+          \" Section Header - required - don't modify
+.Bl -tag -width -indent  \" Differs from above in tag removed
+.It Fl c                 \"-a flag as a list item
+For print chars.
+.It Fl s
+For print chars.
+.It Fl %
+to declare a conversion specifier.
+.El                      \" Ends the list
+.Pp
 
-CONVERSION CUSTOM SPECIFIER
--c For print chars.
--s for print strings.
--% to declare a conversion specifier.
+.Sh FLAGS                \" File used or created by the topic of the man page
+.Bl -tag -width "/Users/joeuser/Library/really_long_file_name" -compact
+.It Pa -  
+For non-custom conversion specifiers.
+.It Pa 0, +, space, # 
+For non-custom conversion specifiers.
 
+.Sh AUTHORS
 
-FLAGS
+- Eddie Jesus Huaripayta Gonzales
 
--- For non-custom conversion specifiers.
--0, +, space, # for non-custom conversion specifiers.
+- Roberto Andres Condezo Monge
